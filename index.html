@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login or Sign Up Page</title>
+
+	<link rel="stylesheet" href="asset/fonts/css/all.css">
+	<link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+
+
+<body>
+
+	<header class="navigation">
+		<h2 class="logo">Logo</h2>
+		<nav class="nav-list">
+			<a href="#">Home</a>
+			<a href="#">Service</a>
+			<a href="#">About</a>
+			<a href="#">Contract</a>
+			<button class="btn-popup">Login</button>
+		</nav>
+	</header>
+
+	<div class="wrapper">
+
+		<div class="login-box">
+			<div class="close"></div>
+			<form action="" class="login-box-form">
+				<h2 class="login">Login</h2>
+			<div class="input-box">
+				<input type="text" required>
+				<span class="icon">
+					<i class="fa-regular fa-envelope"></i>
+				</span>
+				<label>Email</label>
+			</div>
+			<div class="input-box">
+				<input type="password" required>
+				<span class="icon">
+					<i class="fa-solid fa-lock"></i>
+				</span>
+				<label>Password</label>
+			</div>
+			<div class="login-box-info">
+				<p><input type="checkbox"> Remember me
+				<a href="#">Forgot Password?</a></p>
+				<button class="btn-login" value="submit">Login</button>
+			</div>
+			<div class="reg">
+				<p>Don't have a account please <a href="#">Registration</a></p>
+			</div>
+			<div class="info">
+				<a href="#">
+					<span>
+						<i class="fa-brands fa-facebook"></i>
+					</span>
+				</a>
+				<a href="#">
+					<span>
+						<i class="fa-brands fa-youtube"></i>
+					</span>
+				</a>
+				<a href="#">
+					<span>
+						<i class="fa-brands fa-whatsapp"></i>
+					</span>
+				</a>
+			</div>
+			</form>
+		</div>
+
+		<div class="reg-box">
+			<form action="" class="login-box-form">
+				<h2 class="login">Registration</h2>
+
+				<div class="input-box">
+					<input type="text" required>
+					<span class="icon">
+						<i class="fa-regular fa-user"></i>
+					</span>
+					<label>User Name</label>
+				</div>
+				<div class="input-box">
+					<input type="text" required>
+					<span class="icon">
+						<i class="fa-regular fa-envelope"></i>
+					</span>
+					<label>Email</label>
+				</div>
+				<div class="input-box">
+					<input type="password" required>
+					<span class="icon">
+						<i class="fa-solid fa-lock"></i>
+					</span>
+					<label>Password</label>
+				</div>
+				<div class="reg-box-info">
+					<button class="btn-reg" value="submit">Registration</button>
+					<p><input type="checkbox"> I am agree with all terms and condition
+					</p>
+				</div>
+				<div class="log">
+					<p>I have already an account <a href="#">Login</a></p>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+
+	
+	<script src="asset/js/jquery-3.7.1.min.js"></script>
+	<script>
+		
+		$('.reg p a').click(function () {
+			$('.login-box').hide(function () {
+				$('.reg-box').show(function () {
+					$('.log p a').click(function () {
+						$('.reg-box').hide(function () {
+							$('.login-box').show(1000);
+						});
+					});
+				});
+			});
+		});
+
+		$('.btn-popup').click(function () {
+			$('.wrapper').toggle()
+		});
+
+		$('.wrapper').hide();
+
+		
+
+	</script>
+</body>
+
+
+
+
+
+</html>
